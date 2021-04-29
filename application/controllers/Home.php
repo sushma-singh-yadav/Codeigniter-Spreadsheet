@@ -5,7 +5,6 @@ require FCPATH.'vendor/autoload.php';
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 class Home extends CI_Controller {
-
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('home_model');
