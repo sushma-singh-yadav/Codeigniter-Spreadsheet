@@ -82,6 +82,7 @@ class Home extends CI_Controller {
 		$sheet->setCellValue('B1', 'Product Name');
 		$sheet->setCellValue('C1', 'Quantity');
 		$sheet->setCellValue('D1', 'Price');
+		$sheet->setCellValue('E1', 'Subtotal');
 
 		$sn=2;
 		foreach ($productlist as $prod) {
@@ -90,8 +91,12 @@ class Home extends CI_Controller {
 			$sheet->setCellValue('B'.$sn,$prod->product_name);
 			$sheet->setCellValue('C'.$sn,$prod->product_quantity);
 			$sheet->setCellValue('D'.$sn,$prod->product_price);
+			$sheet->setCellValue('E'.$sn,'=C'.$sn.'*D'.$sn);
 			$sn++;
 		}
+		//TOTAL
+		$sheet->setCellValue('D8','Total');
+		$sheet->setCellValue('E8','=SUM(E2:E'.($sn-1).')');
 
 		$writer = new Xlsx($spreadsheet);
 		$writer->save("php://output");
