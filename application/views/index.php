@@ -9,7 +9,7 @@
 <h2>Phpspreadsheet Tutorial
 
 <span class="float-right">
-<a class="btn btn-success" href="<?php echo base_url('home/spreadhseet_format_download');?>" target="_blank">Download Excel Format</a>
+<a class="btn btn-success" href="<?php echo base_url('home/spreadsheet_format_download');?>" target="_blank">Download Excel Format</a>
 <a class="btn btn-info" href="<?php echo base_url('home/spreadsheet_export');?>" target="_blank">Download Excel Data</a>
 </span>
 </h2>
