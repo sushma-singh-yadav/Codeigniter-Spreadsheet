@@ -14,7 +14,7 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('index');
 	}
-	public function spreadhseet_format_download()
+	public function spreadsheet_format_download()
 	{
 		header('Content-Type: application/vnd.ms-excel');
 		header('Content-Disposition: attachment;filename="hello_world.xlsx"');
